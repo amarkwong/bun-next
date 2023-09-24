@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Card from "./components/Card";
 import Carousel from "./components/Carousel";
+import Form from "./components/Form";
 
 export default function Home() {
   const cards = [
@@ -25,7 +26,10 @@ export default function Home() {
 
   return (
     <>
+      <div className="flex">
       <Carousel cards={cards} />
+      <Form />
+      </div>
     </>
   );
 }

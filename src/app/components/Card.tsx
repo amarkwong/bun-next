@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 interface CardProps {
   emoji: string;
@@ -19,7 +20,7 @@ const Card: React.FC<CardProps> = ({ emoji, image, style }) => {
   return (
     <div 
       onClick={handleCardClick} 
-      className="w-48 h-72 border border-black cursor-pointer perspective-1000"
+      className="w-48 h-72" 
       style={{...style, perspective: '1000px' }}
     >
       <div 
@@ -44,8 +45,7 @@ const Card: React.FC<CardProps> = ({ emoji, image, style }) => {
           className="absolute w-full h-full bg-white flex items-center justify-center transform rotate-y-180"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)', zIndex: isFlipped ? 1 : 0 }}
         >
-          <img src={image} alt="Movie" className="w-full h-full object-cover" />
-        </div>
+          <Image src={image} alt="Movie" className="w-full h-full object-cover" width={150} height={226} /> </div>
       </div>
     </div>
   );
