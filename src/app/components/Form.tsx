@@ -25,7 +25,6 @@ export default function Form(props: FormProps) {
 //     fetchImage(e.target.value);
 //   };
 
-console.log(movie)
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <div className="card-body">
@@ -37,23 +36,7 @@ console.log(movie)
             type="text"
             value={emoji}
           />
-          {/* <input
-            name="movie"
-            placeholder="Movie"
-            className="input input-bordered w-full max-w-xs"
-            type="text"
-            value={movie}
-          />
-          {image && (
-            <Image
-              src={props.image ?? ""}
-              alt="Movie"
-              className="w-full h-full object-cover"
-              width={150}
-              height={226}
-            />
-          )} */}
-          <SearchMovie  />
+          <SearchMovie />
         </form>
       </div>
     </div>
